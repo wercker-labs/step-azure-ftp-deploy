@@ -1,0 +1,20 @@
+name: azure-ftp-deploy
+version: 0.0.1
+description: Upload your webapplication to Windows Azure.
+keywords:
+  - azure
+  - ftp
+  - .net
+  - c#
+properties:
+  publish-url:
+    type: string
+    required: true
+  username:
+    type: string
+    required: true
+  password:
+    type: string
+    required: true
+
+
