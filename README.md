@@ -15,7 +15,7 @@ To use:
 * `files` The files to test, use space as seperator. When left empty, all dll's with "test" in their name will be tested.
 
 * `publish-url` (required) Full FTP path to upload to. Should start with ftp:// and end with wwwroot.
-* `username` (required) Username to connect to FTP server
+* `username` (required) Username to connect to FTP server. _You must escape `\` and `$`, see example._
 * `password` (required) Password to connect to FTP server
 
 # Example
@@ -27,7 +27,7 @@ build:
   steps:
     - wercker-labs/azure-ftp-deploy:
         publish-url: ftp://waws-prod-blu-003.ftp.azurewebsites.windows.net/site/wwwroot
-        username: test\$test
+        username: test\\\$test
         password: $AZURE_PASSWORD
 ```
 
