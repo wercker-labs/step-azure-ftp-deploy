@@ -1,5 +1,5 @@
 name: azure-ftp-deploy
-version: 0.0.2
+version: 0.0.3
 description: Upload your webapplication to Windows Azure.
 keywords:
   - azure
