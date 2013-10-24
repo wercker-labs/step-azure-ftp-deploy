@@ -8,5 +8,10 @@ FTP_URL=$WERCKER_AZURE_FTP_DEPLOY_PUBLISH_URL
 FTP_PASSWORD=$WERCKER_AZURE_FTP_DEPLOY_PASSWORD
 FTP_USERNAME=$WERCKER_AZURE_FTP_DEPLOY_USERNAME
 
+echo "Test connection"
+
+echo "curl -v -u $FTP_USERNAME:$FTP_PASSWORD $FTP_URL/"
+curl -v -u $FTP_USERNAME:$FTP_PASSWORD $FTP_URL/
+
 echo "find . -type f -exec curl -v -u $FTP_USERNAME:$FTP_PASSWORD --ftp-create-dirs -T {} $FTP_URL/{} \;"
 find . -type f -exec curl -v -u $FTP_USERNAME:$FTP_PASSWORD --ftp-create-dirs -T {} $FTP_URL/{} \;
