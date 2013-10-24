@@ -13,5 +13,5 @@ echo "Test connection"
 echo "curl -v -u $FTP_USERNAME:$FTP_PASSWORD $FTP_URL/"
 curl -v -u $FTP_USERNAME:$FTP_PASSWORD $FTP_URL/
 
-echo "find . -type f -exec curl -v -u $FTP_USERNAME:$FTP_PASSWORD --ftp-create-dirs -T {} $FTP_URL/{} \;"
-find . -type f -exec curl -v -u $FTP_USERNAME:$FTP_PASSWORD --ftp-create-dirs -T {} $FTP_URL/{} \;
+echo "find . -type f -exec curl -u $FTP_USERNAME:$FTP_PASSWORD --ftp-create-dirs -T {} $FTP_URL/{} \;"
+find . -type f -exec curl -u $FTP_USERNAME:$FTP_PASSWORD --ftp-create-dirs -T {} $FTP_URL/{} \;
