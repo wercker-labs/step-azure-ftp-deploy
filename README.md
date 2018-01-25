@@ -15,7 +15,7 @@ To use:
 * `files` The files to test, use space as seperator. When left empty, all dll's with "test" in their name will be tested.
 
 * `publish-url` (required) Full FTP path to upload to. Should start with ftp:// and end with wwwroot.
-* `username` (required) Username to connect to FTP server. _You must escape `\` and `$`, see example._
+* `username` (required) Username to connect to FTP server. _You must escape `\` and `$`, see example. If you have issues, Azure may allow just the part following `\$`. In the example below, this would be `test`
 * `password` (required) Password to connect to FTP server
 
 # Example
